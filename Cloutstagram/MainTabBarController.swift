@@ -7,13 +7,29 @@
 //
 
 import UIKit
-
+import Firebase
 // Create a screen for navigation
 class MainTabBarController: UITabBarController {
     
     // Override when loading
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // If a user has no login info ..
+        if Auth.auth().currentUser == nil {
+            
+            // Bring screen back to the main thread
+            DispatchQueue.main.async {
+                // Show this screen if not logged in
+                let loginController = LoginController()
+                
+                let navController = UINavigationController(rootViewController: loginController)
+                
+                self.present(navController, animated: true, completion: nil)
+            }
+            
+            return 
+        }
         
         // Allow grids to flow onto its layout
         let layout = UICollectionViewFlowLayout()

@@ -16,6 +16,7 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     // Onload fill up screen with info
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView?.backgroundColor = .white
         
         fetchUser()
@@ -25,6 +26,35 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         
+        setupLogOutButton()
+        
+    }
+    
+    // Log out button
+    fileprivate func setupLogOutButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "gear").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleLogOut))
+    }
+    
+    // Button handling the logout alert
+    @objc func handleLogOut() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        // Log out buttom alert + it's action
+        alertController.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (_) in
+            
+            // Signs the user out of the application
+            do {
+                try Auth.auth().signOut()
+            } catch let signOutErr {
+                print("Failed to sign out: ", signOutErr)
+            }
+            
+            }))
+        
+        // Cancel button alert
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     // 7 cells

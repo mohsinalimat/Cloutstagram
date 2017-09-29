@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // Make profile picture button
     let plusPhotoButton: UIButton = {
@@ -203,6 +203,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Make background white
+        view.backgroundColor = .white
         
         // Add button to the screen
         view.addSubview(plusPhotoButton)

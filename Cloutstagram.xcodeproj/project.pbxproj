@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26D6362D1F7CA41200C33EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6362C1F7CA41200C33EEC /* AppDelegate.swift */; };
-		26D6362F1F7CA41200C33EEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6362E1F7CA41200C33EEC /* ViewController.swift */; };
+		26D6362F1F7CA41200C33EEC /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6362E1F7CA41200C33EEC /* SignUpController.swift */; };
 		26D636321F7CA41200C33EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D636301F7CA41200C33EEC /* Main.storyboard */; };
 		26D636341F7CA41200C33EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D636331F7CA41200C33EEC /* Assets.xcassets */; };
 		26D636371F7CA41200C33EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D636351F7CA41200C33EEC /* LaunchScreen.storyboard */; };
@@ -17,6 +17,7 @@
 		26E3FF931F7DB3CD002CD3AD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3FF921F7DB3CC002CD3AD /* MainTabBarController.swift */; };
 		26E3FF951F7DB57E002CD3AD /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3FF941F7DB57E002CD3AD /* UserProfileController.swift */; };
 		26E3FF981F7DBD3A002CD3AD /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3FF971F7DBD3A002CD3AD /* UserProfileHeader.swift */; };
+		26E3FF9B1F7EDB5C002CD3AD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3FF9A1F7EDB5C002CD3AD /* LoginController.swift */; };
 		E120B1C9ABDC6F79895D2955 /* Pods_Cloutstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C8233812475A9C65312F76 /* Pods_Cloutstagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +25,7 @@
 		03C8233812475A9C65312F76 /* Pods_Cloutstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cloutstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D636291F7CA41200C33EEC /* Cloutstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloutstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D6362C1F7CA41200C33EEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26D6362E1F7CA41200C33EEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26D6362E1F7CA41200C33EEC /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		26D636311F7CA41200C33EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26D636331F7CA41200C33EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26D636361F7CA41200C33EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		26E3FF921F7DB3CC002CD3AD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		26E3FF941F7DB57E002CD3AD /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		26E3FF971F7DBD3A002CD3AD /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
+		26E3FF9A1F7EDB5C002CD3AD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		50381DD31ACA87278C382732 /* Pods-Cloutstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cloutstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cloutstagram/Pods-Cloutstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		72A414DEFDE8359D630DD05B /* Pods-Cloutstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cloutstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cloutstagram/Pods-Cloutstagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,11 +73,11 @@
 		26D6362B1F7CA41200C33EEC /* Cloutstagram */ = {
 			isa = PBXGroup;
 			children = (
+				26E3FF991F7EDB50002CD3AD /* Login */,
 				26E3FF961F7DBD2C002CD3AD /* UserProfile */,
 				26E3FF8B1F7D860A002CD3AD /* Utils */,
 				26D6362C1F7CA41200C33EEC /* AppDelegate.swift */,
 				26E3FF921F7DB3CC002CD3AD /* MainTabBarController.swift */,
-				26D6362E1F7CA41200C33EEC /* ViewController.swift */,
 				26D636301F7CA41200C33EEC /* Main.storyboard */,
 				26D636331F7CA41200C33EEC /* Assets.xcassets */,
 				26D636351F7CA41200C33EEC /* LaunchScreen.storyboard */,
@@ -100,6 +102,15 @@
 				26E3FF941F7DB57E002CD3AD /* UserProfileController.swift */,
 			);
 			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		26E3FF991F7EDB50002CD3AD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				26E3FF9A1F7EDB5C002CD3AD /* LoginController.swift */,
+				26D6362E1F7CA41200C33EEC /* SignUpController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		36CF5D0B90ACFD3C15EDDE77 /* Pods */ = {
@@ -255,12 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26D6362F1F7CA41200C33EEC /* ViewController.swift in Sources */,
+				26D6362F1F7CA41200C33EEC /* SignUpController.swift in Sources */,
 				26E3FF8D1F7D861B002CD3AD /* Extensions.swift in Sources */,
 				26E3FF931F7DB3CD002CD3AD /* MainTabBarController.swift in Sources */,
 				26E3FF981F7DBD3A002CD3AD /* UserProfileHeader.swift in Sources */,
 				26E3FF951F7DB57E002CD3AD /* UserProfileController.swift in Sources */,
 				26D6362D1F7CA41200C33EEC /* AppDelegate.swift in Sources */,
+				26E3FF9B1F7EDB5C002CD3AD /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
