@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26D6362D1F7CA41200C33EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6362C1F7CA41200C33EEC /* AppDelegate.swift */; };
+		26D6362F1F7CA41200C33EEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6362E1F7CA41200C33EEC /* ViewController.swift */; };
+		26D636321F7CA41200C33EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D636301F7CA41200C33EEC /* Main.storyboard */; };
+		26D636341F7CA41200C33EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D636331F7CA41200C33EEC /* Assets.xcassets */; };
+		26D636371F7CA41200C33EEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D636351F7CA41200C33EEC /* LaunchScreen.storyboard */; };
+		26E3FF8D1F7D861B002CD3AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3FF8C1F7D861B002CD3AD /* Extensions.swift */; };
+		26E3FF911F7D931B002CD3AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26E3FF901F7D931B002CD3AD /* GoogleService-Info.plist */; };
+		26E3FF931F7DB3CD002CD3AD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3FF921F7DB3CC002CD3AD /* MainTabBarController.swift */; };
+		26E3FF951F7DB57E002CD3AD /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3FF941F7DB57E002CD3AD /* UserProfileController.swift */; };
+		26E3FF981F7DBD3A002CD3AD /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3FF971F7DBD3A002CD3AD /* UserProfileHeader.swift */; };
+		E120B1C9ABDC6F79895D2955 /* Pods_Cloutstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C8233812475A9C65312F76 /* Pods_Cloutstagram.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03C8233812475A9C65312F76 /* Pods_Cloutstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cloutstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26D636291F7CA41200C33EEC /* Cloutstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloutstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26D6362C1F7CA41200C33EEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26D6362E1F7CA41200C33EEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26D636311F7CA41200C33EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26D636331F7CA41200C33EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26D636361F7CA41200C33EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26D636381F7CA41200C33EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E3FF8C1F7D861B002CD3AD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		26E3FF901F7D931B002CD3AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		26E3FF921F7DB3CC002CD3AD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		26E3FF941F7DB57E002CD3AD /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		26E3FF971F7DBD3A002CD3AD /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
+		50381DD31ACA87278C382732 /* Pods-Cloutstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cloutstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cloutstagram/Pods-Cloutstagram.debug.xcconfig"; sourceTree = "<group>"; };
+		72A414DEFDE8359D630DD05B /* Pods-Cloutstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cloutstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cloutstagram/Pods-Cloutstagram.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26D636261F7CA41200C33EEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E120B1C9ABDC6F79895D2955 /* Pods_Cloutstagram.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26D636201F7CA41200C33EEC = {
+			isa = PBXGroup;
+			children = (
+				26D6362B1F7CA41200C33EEC /* Cloutstagram */,
+				26D6362A1F7CA41200C33EEC /* Products */,
+				36CF5D0B90ACFD3C15EDDE77 /* Pods */,
+				A180A7F055FAB94E35FD515C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		26D6362A1F7CA41200C33EEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26D636291F7CA41200C33EEC /* Cloutstagram.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26D6362B1F7CA41200C33EEC /* Cloutstagram */ = {
+			isa = PBXGroup;
+			children = (
+				26E3FF961F7DBD2C002CD3AD /* UserProfile */,
+				26E3FF8B1F7D860A002CD3AD /* Utils */,
+				26D6362C1F7CA41200C33EEC /* AppDelegate.swift */,
+				26E3FF921F7DB3CC002CD3AD /* MainTabBarController.swift */,
+				26D6362E1F7CA41200C33EEC /* ViewController.swift */,
+				26D636301F7CA41200C33EEC /* Main.storyboard */,
+				26D636331F7CA41200C33EEC /* Assets.xcassets */,
+				26D636351F7CA41200C33EEC /* LaunchScreen.storyboard */,
+				26D636381F7CA41200C33EEC /* Info.plist */,
+				26E3FF901F7D931B002CD3AD /* GoogleService-Info.plist */,
+			);
+			path = Cloutstagram;
+			sourceTree = "<group>";
+		};
+		26E3FF8B1F7D860A002CD3AD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				26E3FF8C1F7D861B002CD3AD /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		26E3FF961F7DBD2C002CD3AD /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				26E3FF971F7DBD3A002CD3AD /* UserProfileHeader.swift */,
+				26E3FF941F7DB57E002CD3AD /* UserProfileController.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		36CF5D0B90ACFD3C15EDDE77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50381DD31ACA87278C382732 /* Pods-Cloutstagram.debug.xcconfig */,
+				72A414DEFDE8359D630DD05B /* Pods-Cloutstagram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A180A7F055FAB94E35FD515C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03C8233812475A9C65312F76 /* Pods_Cloutstagram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26D636281F7CA41200C33EEC /* Cloutstagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26D6363B1F7CA41200C33EEC /* Build configuration list for PBXNativeTarget "Cloutstagram" */;
+			buildPhases = (
+				D9FD42B9DAE62A9CCF620C9F /* [CP] Check Pods Manifest.lock */,
+				26D636251F7CA41200C33EEC /* Sources */,
+				26D636261F7CA41200C33EEC /* Frameworks */,
+				26D636271F7CA41200C33EEC /* Resources */,
+				975CE071877E080983FB1D17 /* [CP] Embed Pods Frameworks */,
+				F7939322BC8B3AA676EEFF07 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cloutstagram;
+			productName = Cloutstagram;
+			productReference = 26D636291F7CA41200C33EEC /* Cloutstagram.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26D636211F7CA41200C33EEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = sanaknaki;
+				TargetAttributes = {
+					26D636281F7CA41200C33EEC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 26D636241F7CA41200C33EEC /* Build configuration list for PBXProject "Cloutstagram" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26D636201F7CA41200C33EEC;
+			productRefGroup = 26D6362A1F7CA41200C33EEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26D636281F7CA41200C33EEC /* Cloutstagram */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26D636271F7CA41200C33EEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D636371F7CA41200C33EEC /* LaunchScreen.storyboard in Resources */,
+				26E3FF911F7D931B002CD3AD /* GoogleService-Info.plist in Resources */,
+				26D636341F7CA41200C33EEC /* Assets.xcassets in Resources */,
+				26D636321F7CA41200C33EEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		975CE071877E080983FB1D17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cloutstagram/Pods-Cloutstagram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cloutstagram/Pods-Cloutstagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9FD42B9DAE62A9CCF620C9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cloutstagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7939322BC8B3AA676EEFF07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cloutstagram/Pods-Cloutstagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26D636251F7CA41200C33EEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D6362F1F7CA41200C33EEC /* ViewController.swift in Sources */,
+				26E3FF8D1F7D861B002CD3AD /* Extensions.swift in Sources */,
+				26E3FF931F7DB3CD002CD3AD /* MainTabBarController.swift in Sources */,
+				26E3FF981F7DBD3A002CD3AD /* UserProfileHeader.swift in Sources */,
+				26E3FF951F7DB57E002CD3AD /* UserProfileController.swift in Sources */,
+				26D6362D1F7CA41200C33EEC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		26D636301F7CA41200C33EEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26D636311F7CA41200C33EEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26D636351F7CA41200C33EEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26D636361F7CA41200C33EEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26D636391F7CA41200C33EEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26D6363A1F7CA41200C33EEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26D6363C1F7CA41200C33EEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50381DD31ACA87278C382732 /* Pods-Cloutstagram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34U57LC3TA;
+				INFOPLIST_FILE = Cloutstagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sanaknaki.Cloutstagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26D6363D1F7CA41200C33EEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72A414DEFDE8359D630DD05B /* Pods-Cloutstagram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34U57LC3TA;
+				INFOPLIST_FILE = Cloutstagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sanaknaki.Cloutstagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26D636241F7CA41200C33EEC /* Build configuration list for PBXProject "Cloutstagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26D636391F7CA41200C33EEC /* Debug */,
+				26D6363A1F7CA41200C33EEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26D6363B1F7CA41200C33EEC /* Build configuration list for PBXNativeTarget "Cloutstagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26D6363C1F7CA41200C33EEC /* Debug */,
+				26D6363D1F7CA41200C33EEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26D636211F7CA41200C33EEC /* Project object */;
+}
