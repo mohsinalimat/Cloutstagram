@@ -11,6 +11,8 @@ import Firebase
 // Making the user profile screen
 class UserProfileController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    let cellId = "cellId"
+    
     // Onload fill up screen with info
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,45 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         
         // Build header section
         collectionView?.register(UserProfileHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
+        
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        
+    }
+    
+    // 7 cells
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    // Grab the cells and fill them
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        
+        cell.backgroundColor = .purple
+        
+        return cell
+    }
+    
+    // Spacing between cells left-to-right
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    // Spacing between cells bottom-to-top
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    // Size for each cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        // Width / 3 of screen size minus 2 lines between cells
+        let width = (view.frame.width - 2) / 3
+        
+        // It's a square
+        return CGSize(width: width, height: width)
+        
     }
     
     // Making a header
