@@ -31,6 +31,12 @@ class MainTabBarController: UITabBarController {
             return 
         }
         
+        setupViewControllers()
+
+    }
+    
+    func setupViewControllers() {
+        
         // Allow grids to flow onto its layout
         let layout = UICollectionViewFlowLayout()
         
@@ -47,7 +53,5 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = .black
         
         viewControllers = [navController, UIViewController()]
-    
     }
-    
 }

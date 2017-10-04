@@ -45,6 +45,13 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
             // Signs the user out of the application
             do {
                 try Auth.auth().signOut()
+                
+                // Go back to login screen
+                let loginController = LoginController()
+                let navController = UINavigationController(rootViewController: loginController)
+                
+                self.present(navController, animated: true, completion: nil)
+                
             } catch let signOutErr {
                 print("Failed to sign out: ", signOutErr)
             }
