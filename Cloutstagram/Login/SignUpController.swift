@@ -200,6 +200,8 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
                     
                     mainTabBarController.setupViewControllers()
                     
+                    // Swap screens
+                    self.dismiss(animated: true, completion: nil)
                 })
                 
             })
