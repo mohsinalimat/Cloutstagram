@@ -9,11 +9,33 @@
 import UIKit
 import Firebase
 // Create a screen for navigation
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        let index = viewControllers?.index(of: viewController)
+    
+        // If you click the photo selector button, no tab pops up
+        if index == 2 {
+            
+            let layout = UICollectionViewFlowLayout()
+            let photoSelectorController = PhotoSelectorController(collectionViewLayout: layout)
+            let navController = UINavigationController(rootViewController: photoSelectorController)
+            
+            present(navController, animated: true, completion: nil)
+            
+            return false
+        }
+        
+        return true
+    }
     
     // Override when loading
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Run tab function above ^
+        self.delegate = self
         
         // If a user has no login info ..
         if Auth.auth().currentUser == nil {
