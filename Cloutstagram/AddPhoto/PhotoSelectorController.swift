@@ -17,7 +17,7 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = .yellow
+        collectionView?.backgroundColor = .white
         
         setupNavigationButtons()
         
@@ -43,44 +43,57 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     // Array of images
     var images = [UIImage]()
     
-    // Fetch photos to load
-    fileprivate func fetchPhotos(){
-        
-        // How we going to fetch pictures
+    // How we going to fetch pictures
+    fileprivate func assetsFetchOptions() -> PHFetchOptions {
         let fetchOptions = PHFetchOptions()
         fetchOptions.fetchLimit = 15
         let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
         fetchOptions.sortDescriptors = [sortDescriptor] // Display most recent pictures in the grid first
         
-        // Fetch all photos from lib
-        let allPhotos = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+        return fetchOptions
+    }
+    
+    // Assets array
+    var assets = [PHAsset]()
+    
+    // Fetch photos to load
+    fileprivate func fetchPhotos(){
         
-        // A for loop for all fetched photos
-        allPhotos.enumerateObjects({ (asset, count, stop) in
-            
-            // Sizing out the picture to properly fit
-            let imageManager = PHImageManager.default()
-            let targetSize = CGSize(width: 350, height: 350)
-            let options = PHImageRequestOptions()
-            options.isSynchronous = true
-            imageManager.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFit, options: options, resultHandler: { (image, info) in
+        // Fetch all photos from lib
+        let allPhotos = PHAsset.fetchAssets(with: .image, options: assetsFetchOptions())
+        
+        // In the background thread, load the images
+        DispatchQueue.global(qos: .background).async {
+            // A for loop for all fetched photos
+            allPhotos.enumerateObjects({ (asset, count, stop) in
                 
-                // Push image to image array
-                if let image = image {
-                    self.images.append(image)
+                // Sizing out the picture to properly fit
+                let imageManager = PHImageManager.default()
+                let targetSize = CGSize(width: 200, height: 200)
+                let options = PHImageRequestOptions()
+                options.isSynchronous = true
+                imageManager.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFit, options: options, resultHandler: { (image, info) in
                     
-                    if self.selectedImage == nil {
-                        self.selectedImage = image
+                    // Push image to image array
+                    if let image = image {
+                        self.images.append(image)
+                        self.assets.append(asset) // Enumeration asset
+                        
+                        if self.selectedImage == nil {
+                            self.selectedImage = image
+                        }
                     }
-                }
+                    
+                    // Call when you done fetching all photos
+                    if count == allPhotos.count - 1 {
+                        DispatchQueue.main.async {
+                            self.collectionView?.reloadData()
+                        }
+                    }
+                })
                 
-                // Call when you done fetching all photos
-                if count == allPhotos.count - 1 {
-                    self.collectionView?.reloadData()
-                }
             })
-            
-        })
+        }
     }
     
     // Allow a line underneath the chosen header picture
@@ -102,6 +115,21 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
         
         // Turn header to chosen picture
         header.photoImageView.image = selectedImage
+        
+        // Find out the index of the poor quality chosen image
+        if let selectedImage = selectedImage {
+            if let index = self.images.index(of: selectedImage) {
+                let selectedAsset = self.assets[index]
+                
+                let imageManager = PHImageManager.default()
+                let targetSzie = CGSize(width: 600, height: 600)
+                imageManager.requestImage(for: selectedAsset, targetSize: targetSzie, contentMode: .default, options: nil) { (image, info) in
+                    
+                    header.photoImageView.image = image
+                    
+                }
+            }
+        }
         
         return header
     }
