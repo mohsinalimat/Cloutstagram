@@ -38,6 +38,10 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
         self.selectedImage = images[indexPath.item]
         
         self.collectionView?.reloadData()
+        
+        // When you select a picture, it scrolls back to top
+        let indexPath = IndexPath(item: 0, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
     }
     
     // Array of images
@@ -46,7 +50,7 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     // How we going to fetch pictures
     fileprivate func assetsFetchOptions() -> PHFetchOptions {
         let fetchOptions = PHFetchOptions()
-        fetchOptions.fetchLimit = 15
+        fetchOptions.fetchLimit = 30
         let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
         fetchOptions.sortDescriptors = [sortDescriptor] // Display most recent pictures in the grid first
         
@@ -109,9 +113,14 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
         return CGSize(width: width, height: width)
     }
     
+    var header: PhotoSelectorHeader?
+    
     // Override header function
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! PhotoSelectorHeader
+        
+        // Everytime I render the header, hold on to a reference that we can call later on
+        self.header = header
         
         // Turn header to chosen picture
         header.photoImageView.image = selectedImage
@@ -186,7 +195,9 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     
     // What happens when you click next
     @objc func handleNext() {
-        print("Handling Next")
+        let sharePhotoController = SharePhotoController()
+        sharePhotoController.selectedImage = header?.photoImageView.image
+        navigationController?.pushViewController(sharePhotoController, animated: true)
     }
     
 }
